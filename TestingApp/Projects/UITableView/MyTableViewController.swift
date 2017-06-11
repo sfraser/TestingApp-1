@@ -67,7 +67,7 @@ class MyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView,
                             leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let duplicateAction = UIContextualAction(style: .normal, title: "Duplicate") { _, _, done in
-            self.importantData.append(self.importantData[indexPath.item])
+            self.importantData.insert( self.importantData[indexPath.item], at: indexPath.item)
             tableView.insertRows(at: [indexPath], with: .automatic)
             done(true)
         }
@@ -89,11 +89,11 @@ class MyTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
+        if editingStyle == .delete {
             // Delete the row from the data source
-//            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
             importantData.remove(at: indexPath.item)
-        /*} else */if editingStyle == .insert {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
