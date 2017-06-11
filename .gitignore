@@ -1,0 +1,24 @@
+# Stolen from https://github.com/github/gitignore/blob/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Xcode.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+
+# Stolen from https://raw.githubusercontent.com/github/gitignore/ebb436c5590ced8ae58eea87e6400abc759f60d7/Swift.gitignore
