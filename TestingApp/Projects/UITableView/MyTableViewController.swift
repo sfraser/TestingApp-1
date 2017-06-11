@@ -67,7 +67,7 @@ class MyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView,
                             leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let duplicateAction = UIContextualAction(style: .normal, title: "Duplicate") { _, _, done in
-            self.importantData.insert( self.importantData[indexPath.item], at: indexPath.item)
+            self.importantData.insert(self.importantData[indexPath.item], at: indexPath.item)
             tableView.insertRows(at: [indexPath], with: .automatic)
             done(true)
         }
